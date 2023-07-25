@@ -37,25 +37,14 @@ int _printf(const char *format, ...)
 			precision = get_precision(format, &i, list);
 			size = get_size(format, &i);
 			++i;
-<<<<<<< HEAD
 			printed = handle_print(format, &i, list, buffer, flags,
 			width, precision, size);
-=======
-			printed = handle_print(format, &i, list, buffer,
-				flags, width, precision, size);
->>>>>>> 9c91789c02aaa5695005a076d594e992a52cd910
 			if (printed == -1)
 				return (-1);
 			printed_chars += printed;
 		}
 	}
-<<<<<<< HEAD
 	print_buffer(buffer, &buff_ind);
-=======
-
-	print_buffer(buffer, &buff_ind);
-
->>>>>>> 9c91789c02aaa5695005a076d594e992a52cd910
 	va_end(list);
 
 	return (printed_chars);
